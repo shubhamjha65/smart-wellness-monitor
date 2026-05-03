@@ -1,0 +1,62 @@
+.result-box {
+  text-align: center;
+}
+
+.result-box h3 {
+  color: #007bff;
+}
+
+.score {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.suggestion {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Insights */
+.insights-box {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.insights-box ul {
+  padding-left: 20px;
+}
+
+/* Suggestions */
+.suggestions-box {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.suggestions-box ul {
+  padding-left: 20px;
+}
+
+.suggestions-box li {
+  margin-bottom: 6px;
+}
+
+/* Button spacing */
+.result-box button {
+  margin-top: 15px;
+}
+
+/* Mood emphasis */
+.result-box h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* Insights + Suggestions cards */
+.insights-box,
+.suggestions-box {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  margin-top: 10px;
+}

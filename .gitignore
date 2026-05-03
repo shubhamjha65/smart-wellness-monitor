@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Env files
+.env
+client/.env
+server/.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Build files
+build/
+dist/
+client/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Optional
+coverage/

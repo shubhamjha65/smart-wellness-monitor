@@ -1,0 +1,228 @@
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --success: #28a745;
+  --danger: #dc3545;
+
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ================= DARK MODE ================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+  }
+}
+
+/* ================= BASE ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* ================= ROOT LAYOUT ================= */
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* ================= HEADINGS ================= */
+h1, h2, h3 {
+  font-family: var(--heading);
+  color: var(--text-h);
+  margin-bottom: 15px;
+}
+
+/* ================= INPUTS ================= */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-h);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ================= BUTTONS ================= */
+button {
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.secondary {
+  background: #6c757d;
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+/* ================= OPTIONS (QUESTION UI) ================= */
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-btn {
+  background: var(--code-bg);
+  color: var(--text-h);
+  margin: 6px 0;
+}
+
+.option-btn:hover {
+  background: var(--accent-bg);
+}
+
+/* ================= PROGRESS BAR ================= */
+.progress {
+  width: 100%;
+  height: 8px;
+  background: var(--border);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+/* ================= RESULT DISPLAY ================= */
+.result-box {
+  text-align: center;
+}
+
+.score {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.suggestion {
+  font-style: italic;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  width: 100%;
+  padding: 10px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-h);
+}
+
+.navbar button {
+  background: var(--danger);
+}
+
+/* ================= CHART ================= */
+.chart-container {
+  margin-top: 20px;
+}
+
+/* ================= UTILITY ================= */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+/*mood colors for chart */
+.mood-very-happy { color: #28a745; }
+.mood-happy { color: #20c997; }
+.mood-neutral { color: #ffc107; }
+.mood-sad { color: #fd7e14; }
+.mood-very-sad { color: #dc3545; }
+
+/* Fade in */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button press */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Smooth transitions */
+button, .option-btn {
+  transition: all 0.2s ease;
+}
+
+/* Card hover */
+.container:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
